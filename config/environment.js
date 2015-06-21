@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'lyre',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
+    firebase: 'https://song-verse.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
