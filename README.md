@@ -1,7 +1,7 @@
 # Lyre
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+A Lyre was an instrument used throughout the Bible.
+Lyre is a way to find Songs based on Scripture, and vice-versa.
 
 ## Prerequisites
 
