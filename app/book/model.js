@@ -1,7 +1,11 @@
 import DS from 'ember-data';
 
-const attr = DS.attr;
+const {
+  attr,
+  hasMany
+} = DS;
 
 export default DS.Model.extend({
-  name: attr('string')
+  name: attr('string'),
+  songs: hasMany('song')
 });
