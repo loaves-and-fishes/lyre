@@ -14,5 +14,11 @@ export default Ember.Route.extend({
         model.deleteRecord();
       }
     }
+  },
+
+  actions: {
+    saveSong(song) {
+      song.save();
+    }
   }
 });
