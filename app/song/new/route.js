@@ -1,8 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
-    return this.store.createRecord('song');
+  model(params) {
+    return this.store.find('book', params.book).then(book => {
+      return this.store.createRecord('song', {
+        book: book
+      });
+    });
   },
 
   resetController(controller, isExiting) {
@@ -18,7 +22,10 @@ export default Ember.Route.extend({
 
   actions: {
     saveSong(song) {
-      song.save();
+      song.save().then(() => {
+        var book = song.get('book');
+        this.transitionTo('book.view', book.id);
+      });
     }
   }
 });

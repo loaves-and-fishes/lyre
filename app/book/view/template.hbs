@@ -1,3 +1,9 @@
 <h3>{{model.name}}</h3>
 
-{{#link-to 'song.new'}}Add Song{{/link-to}}
+{{#link-to 'song.new' (query-params book=model.id)}}Add Song{{/link-to}}
+
+{{#each model.songs as |song|}}
+  {{#link-to 'song.view' song}}{{song.title}}{{/link-to}}
+{{else}}
+  No songs yet.
+{{/each}}

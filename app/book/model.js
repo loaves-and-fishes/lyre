@@ -7,5 +7,5 @@ const {
 
 export default DS.Model.extend({
   name: attr('string'),
-  songs: hasMany('song')
+  songs: hasMany('song', { inverse: 'book' })
 });

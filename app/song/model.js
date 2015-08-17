@@ -1,7 +1,11 @@
 import DS from 'ember-data';
 
-const attr = DS.attr;
+const {
+  attr,
+  belongsTo
+} = DS;
 
 export default DS.Model.extend({
-  title: attr('string') 
+  title: attr('string'),
+  book: belongsTo('book', { inverse: 'songs' })
 });

@@ -12,6 +12,7 @@ Router.map(function() {
 
   this.route('song', { path: 'songs' }, function () {
     this.route('new');
+    this.route('view', { path: ':song_id' });
   });
 });
 
