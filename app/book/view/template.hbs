@@ -3,9 +3,11 @@
 {{#link-to 'song.new' (query-params book=model.id)}}Add Song{{/link-to}}
 
 {{#if model.songs.isFulfilled}}
-  {{#each model.songs as |song|}}
-    {{#link-to 'song.view' song}}{{song.title}}{{/link-to}}
-  {{else}}
-    No songs yet.
-  {{/each}}
+  <ul>
+    {{#each model.songs as |song|}}
+      <li>{{#link-to 'song.view' song}}{{song.title}}{{/link-to}}</li>
+    {{else}}
+      <li>No songs yet.</li>
+    {{/each}}
+  </ul>
 {{/if}}
