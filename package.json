@@ -31,7 +31,7 @@
     "ember-cli-mirage": "0.1.5",
     "ember-cli-qunit": "0.3.13",
     "ember-cli-uglify": "^1.0.1",
-    "ember-data": "1.13.2",
+    "ember-data": "1.13.9",
     "ember-disable-proxy-controllers": "^1.0.0",
     "ember-export-application-global": "^1.0.2",
     "emberfire": "1.5.0",

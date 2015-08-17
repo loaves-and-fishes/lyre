@@ -24,7 +24,17 @@ export default Ember.Route.extend({
     saveSong(song) {
       song.save().then(() => {
         var book = song.get('book');
-        this.transitionTo('book.view', book.id);
+
+        book.get('songs').then(songs => {
+          songs.pushObject(song);
+
+          book.save().then(() => {
+            this.transitionTo('book.view', book.id);
+          })
+          .catch(error => {
+            console.error(error);
+          });
+        });
       });
     }
   }
