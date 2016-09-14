@@ -1,5 +1,23 @@
 {{yield}}
 
-{{input type="text" value=song.title required=true class="input"}}
+<div class="hero is-light">
+  <div class="hero-body">
+    <h3 class="title">
+      New Song
+    </h3>
 
-<a {{action 'save'}} class="button is-primary">Save</a>
+    <label class="label">Title</label>
+    <p class="control">
+      {{input type="text" value=song.title required=true class="input"}}
+    </p>
+
+    <label class="label">Song</label>
+    <p class="control">
+      {{textarea value=song.content required=true class="textarea" row=10}}
+    </p>
+
+    <p class="control">
+      <a {{action 'save'}} class="button is-primary">Save</a>
+    </p>
+  </div>
+</div>

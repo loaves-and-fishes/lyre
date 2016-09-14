@@ -7,5 +7,6 @@ const {
 
 export default DS.Model.extend({
   title: attr('string'),
+  content: attr('string'),
   book: belongsTo('book', { inverse: 'songs' })
 });
