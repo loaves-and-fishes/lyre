@@ -4,10 +4,10 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'lyre',
     environment: environment,
+    rootURL: '/',
+    locationType: 'auto',
     contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
     firebase: 'https://song-verse.firebaseio.com/',
-    baseURL: '/',
-    locationType: 'auto',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -31,7 +31,6 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.baseURL = '/';
     ENV.locationType = 'none';
 
     // keep test console output quieter
