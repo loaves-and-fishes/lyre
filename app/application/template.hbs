@@ -1,3 +1,11 @@
-<h1>{{#link-to 'index'}}Lyre{{/link-to}}</h1>
+<nav class="nav">
+  <div class="nav-left">
+    {{#link-to 'index' class='nav-item is-brand'}}
+      <strong class="title">lyre</strong>
+    {{/link-to}}
+  </div>
+</nav>
 
-{{outlet}}
+<div class="container">
+  {{outlet}}
+</div>

@@ -1,6 +1,6 @@
-<h3>{{model.name}}</h3>
+<h4 class="subtitle is-4">{{model.name}}</h4>
 
-{{#link-to 'song.new' (query-params book=model.id)}}Add Song{{/link-to}}
+{{#link-to 'song.new' (query-params book=model.id) class='button'}}Add Song{{/link-to}}
 
 {{#if model.songs.isFulfilled}}
   <ul>

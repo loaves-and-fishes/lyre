@@ -6,8 +6,6 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
-    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
-    firebase: 'https://song-verse.firebaseio.com/',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -18,6 +16,21 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    contentSecurityPolicy: {
+      'script-src': ['self', 'unsafe-eval', 'apis.google.com'],
+      'frame-src': ['self', 'https://*.firebaseapp.com'],
+      'connect-src': ['self', 'wss://*.firebaseio.com', 'https://*.googleapis.com']
+    },
+
+    firebase: {
+      apiKey: 'AIzaSyAvESeNtZdUh30H5meXA9oUCLSeDeKviEs',
+      authDomain: 'song-verse.firebaseapp.com',
+      databaseURL: 'https://song-verse.firebaseio.com',
+      storageBucket: 'song-verse.appspot.com',
+      messagingSenderId: '906298120941'
+
     }
   };
 
