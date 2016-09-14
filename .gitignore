@@ -17,3 +17,6 @@ npm-debug.log
 testem.log
 
 .pagefrontrc
+.env.deploy.*
+
+.env.deploy.*
