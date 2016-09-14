@@ -5,7 +5,7 @@
 
     <div class="columns is-multiline is-mobile">
       {{#each model as |book|}}
-        <div class="column is-one-quarter">
+        <div class="column is-2-desktop is-one-quarter-tablet is-half-mobile">
         {{#link-to 'book.view' book class='notification is-info is-block has-text-centered'}}
           {{book.name}}
         {{/link-to}}
