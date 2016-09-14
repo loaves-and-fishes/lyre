@@ -1,13 +1,19 @@
-<h4 class="subtitle is-4">{{model.name}}</h4>
+<div class="hero is-light">
+  <div class="hero-body">
+    <h3 class="title">
+      {{model.name}}
+      {{#link-to 'song.new' (query-params book=model.id) class='button'}}Add Song{{/link-to}}
+    </h3>
 
-{{#link-to 'song.new' (query-params book=model.id) class='button'}}Add Song{{/link-to}}
 
-{{#if model.songs.isFulfilled}}
-  <ul>
-    {{#each model.songs as |song|}}
-      <li>{{#link-to 'song.view' song}}{{song.title}}{{/link-to}}</li>
-    {{else}}
-      <li>No songs yet.</li>
-    {{/each}}
-  </ul>
-{{/if}}
+    {{#if model.songs.isFulfilled}}
+      <ul>
+        {{#each model.songs as |song|}}
+          <li>{{#link-to 'song.view' song}}{{song.title}}{{/link-to}}</li>
+        {{else}}
+          <li>No songs yet.</li>
+        {{/each}}
+      </ul>
+    {{/if}}
+  </div>
+</div>
